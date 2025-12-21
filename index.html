@@ -9,8 +9,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
-/* 🦇 BATMAN THEME */
 :root{
   --primary:#f5c518;
   --accent:#00e5ff;
@@ -50,7 +48,7 @@ h2{
   text-shadow:0 0 15px rgba(245,197,24,0.8);
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero{
   position:relative;
   background:
@@ -84,7 +82,6 @@ h2{
   z-index:2;
 }
 
-/* PROFILE PIC */
 .profile-pic{
   width:320px;
   height:320px;
@@ -162,7 +159,6 @@ h2{
   padding:32px;
   border-radius:18px;
   border:1px solid rgba(245,197,24,0.15);
-  transition:0.3s;
 }
 .card:hover{
   transform:translateY(-10px);
@@ -185,7 +181,7 @@ h2{
     0 0 60px rgba(0,229,255,0.8);
 }
 
-/* 🎵 MUSIC BUTTON */
+/* MUSIC */
 .music-player{
   position:fixed;
   bottom:25px;
@@ -203,7 +199,6 @@ h2{
   cursor:pointer;
   box-shadow:0 0 25px rgba(245,197,24,0.9);
 }
-
 </style>
 </head>
 
@@ -245,19 +240,63 @@ h2{
   </div>
 </div>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="card">
+      MBA (Business Analytics) student interested in data analysis, finance & business intelligence.
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">Advanced Microsoft Excel</div>
+      <div class="card">Power BI</div>
+      <div class="card">Tableau</div>
+      <div class="card">Python</div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">MBA – Business Analytics (2024–2026)</div>
+      <div class="card">B.Sc. Computer Science (2021–2024)</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="container resume-section">
+    <h2>Download Resume</h2>
+    <a href="RAJAT SINGH GAUR Resume update.pdf" download class="resume-btn">
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </div>
+</section>
+
 <script>
-/* NEON PARTICLES */
-const canvas = document.getElementById("neonParticles");
-const ctx = canvas.getContext("2d");
+/* PARTICLES */
+const canvas=document.getElementById("neonParticles");
+const ctx=canvas.getContext("2d");
 
 function resize(){
-  canvas.width = innerWidth;
-  canvas.height = innerHeight;
+  canvas.width=innerWidth;
+  canvas.height=innerHeight;
 }
 resize();
-addEventListener("resize", resize);
+addEventListener("resize",resize);
 
-const particles = Array.from({length:80},()=>({
+const particles=Array.from({length:80},()=>({
   x:Math.random()*canvas.width,
   y:Math.random()*canvas.height,
   r:Math.random()*2+1,
@@ -282,16 +321,14 @@ function animate(){
 }
 animate();
 
-/* 🎵 AUTO PLAY AFTER FIRST CLICK */
+/* MUSIC */
+const music=document.getElementById("bgMusic");
+const muteBtn=document.getElementById("muteBtn");
+
 document.addEventListener("click",()=>{
-  const music=document.getElementById("bgMusic");
   music.muted=false;
   music.play();
 },{once:true});
-
-/* 🔊 MUTE / UNMUTE */
-const music=document.getElementById("bgMusic");
-const muteBtn=document.getElementById("muteBtn");
 
 muteBtn.addEventListener("click",()=>{
   music.muted=!music.muted;
