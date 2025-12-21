@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Me | Rajat Singh Gaur</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#f5c518;
+  --accent:#00e5ff;
+  --bg:#060709;
+  --card:#0f1116;
+  --text:#f1f1f1;
+}
+
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{
+  width:90%;
+  max-width:1000px;
+  margin:auto;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at top, rgba(245,197,24,0.15), transparent 60%),
+    linear-gradient(180deg,#020202,#060709);
+}
+
+.hero img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--primary);
+  box-shadow:
+    0 0 35px rgba(245,197,24,0.9),
+    0 0 70px rgba(0,229,255,0.6);
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:10px;
+  text-shadow:0 0 20px rgba(245,197,24,0.9);
+}
+
+.hero p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* STORY */
+.story{
+  padding:100px 0;
+}
+
+.story-card{
+  background:rgba(15,17,22,0.95);
+  padding:45px;
+  border-radius:22px;
+  line-height:1.9;
+  font-size:18px;
+  border:1px solid rgba(245,197,24,0.2);
+  box-shadow:0 0 30px rgba(245,197,24,0.4);
+}
+
+.story-card span{
+  color:var(--primary);
+  font-weight:600;
+}
+
+/* BACK BUTTON */
+.back-btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:14px 35px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  background:linear-gradient(135deg,#f5c518,#00e5ff);
+  color:#000;
+  box-shadow:0 0 25px rgba(245,197,24,0.9);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <img src="IMG_20251115_185859.jpg" alt="Rajat Singh Gaur">
+    <h1>This Is Me</h1>
+    <p>Not just a resume — this is my journey.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="container">
+    <div class="story-card">
+      <p>
+        Hi, I’m <span>Rajat Singh Gaur</span>.
+      </p>
+
+      <p>
+        Main ek normal background se aata hoon, jahan opportunities limited thi,
+        lekin curiosity unlimited. Technology aur data ne mujhe hamesha attract kiya —
+        kyunki data sirf numbers nahi hota, <span>data decisions banata hai</span>.
+      </p>
+
+      <p>
+        College ke time se hi maine Excel, Python, Power BI jaise tools ke saath kaam
+        karna start kiya. Dheere-dheere samajh aaya ki business aur analytics ka
+        combination hi future hai.
+      </p>
+
+      <p>
+        Aaj main MBA (Business Analytics) pursue kar raha hoon,
+        jahan mera focus sirf marks nahi,
+        balki <span>real-world problem solving</span> hai.
+      </p>
+
+      <p>
+        Ye page meri kahani ka ek chapter hai —
+        aur aage ke chapters abhi likhne baaki hain.
+      </p>
+
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
