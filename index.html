@@ -26,7 +26,7 @@ body{
   overflow-x:hidden;
 }
 
-/* NEON PARTICLES */
+/* PARTICLES */
 #neonParticles{
   position:fixed;
   inset:0;
@@ -42,7 +42,7 @@ section{ padding:100px 0; }
 
 h2{
   text-align:center;
-  margin-bottom:50px;
+  margin-bottom:30px;
   font-size:36px;
   color:var(--primary);
   text-shadow:0 0 15px rgba(245,197,24,0.8);
@@ -59,7 +59,6 @@ h2{
   overflow:hidden;
 }
 
-/* BIG BACKGROUND TEXT */
 .bg-text{
   position:absolute;
   top:50%;
@@ -77,10 +76,7 @@ h2{
     0 0 60px rgba(245,197,24,0.25);
 }
 
-.hero .container{
-  position:relative;
-  z-index:2;
-}
+.hero .container{ position:relative; z-index:2; }
 
 .profile-pic{
   width:320px;
@@ -96,7 +92,6 @@ h2{
 
 .hero h1{
   font-size:60px;
-  letter-spacing:2px;
   text-shadow:
     0 0 15px rgba(245,197,24,0.9),
     0 0 35px rgba(0,229,255,0.7);
@@ -104,9 +99,6 @@ h2{
 .hero p{ font-size:22px; }
 
 /* SOCIAL */
-.social-links{
-  margin-top:20px;
-}
 .social-links a{
   display:inline-block;
   margin:0 10px;
@@ -117,20 +109,13 @@ h2{
   border-radius:50%;
   background:#111;
   color:var(--primary);
-  transition:0.3s;
   box-shadow:0 0 15px rgba(245,197,24,0.7);
-}
-.social-links a:hover{
-  transform:translateY(-6px);
-  background:var(--primary);
-  color:#000;
 }
 
 /* PANEL */
 .panel{
   background:rgba(5,5,8,0.9);
   backdrop-filter:blur(18px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.9);
   border-bottom:1px solid rgba(245,197,24,0.3);
 }
 .panel .container{
@@ -147,7 +132,7 @@ h2{
 }
 .panel a:hover{ color:var(--primary); }
 
-/* CARDS */
+/* GRID / CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -168,52 +153,49 @@ h2{
 /* RESUME */
 .resume-section{ text-align:center; }
 .resume-btn{
-  display:inline-block;
   padding:16px 40px;
-  font-size:18px;
-  font-weight:600;
   background:linear-gradient(135deg,#f5c518,#00e5ff);
   color:#000;
-  text-decoration:none;
   border-radius:40px;
-  box-shadow:
-    0 0 30px rgba(245,197,24,0.9),
-    0 0 60px rgba(0,229,255,0.8);
+  text-decoration:none;
+  font-weight:600;
 }
 
-/* MUSIC */
-.music-player{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  z-index:999;
+/* 🔥 LET'S WORK TOGETHER */
+.cta{
+  background:linear-gradient(135deg,#020202,#0b0d10);
+  border-top:1px solid rgba(245,197,24,0.25);
+  text-align:center;
 }
-.music-player button{
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  border:none;
-  background:linear-gradient(135deg,#f5c518,#00e5ff);
+.cta h2{
+  font-size:42px;
+}
+.cta p{
+  color:#bdbdbd;
+  font-size:18px;
+  margin-bottom:35px;
+}
+.cta-links a{
+  display:inline-block;
+  margin:10px 15px;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
   color:#000;
-  font-size:20px;
-  cursor:pointer;
-  box-shadow:0 0 25px rgba(245,197,24,0.9);
+  background:linear-gradient(135deg,#f5c518,#00e5ff);
+  box-shadow:0 0 25px rgba(245,197,24,0.8);
 }
+.cta-links a:hover{
+  transform:translateY(-6px);
+}
+
 </style>
 </head>
 
 <body>
 
 <canvas id="neonParticles"></canvas>
-
-<!-- 🎵 BACKGROUND MUSIC -->
-<audio id="bgMusic" autoplay loop muted>
-  <source src="Pixies_Where_Is_My_Mind_Ringtone_(by Fringster.com).mp3" type="audio/mpeg">
-</audio>
-
-<div class="music-player">
-  <button id="muteBtn"><i class="fas fa-volume-mute"></i></button>
-</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -222,15 +204,9 @@ h2{
     <img src="IMG_20251115_185859.jpg" class="profile-pic">
     <h1>Rajat Singh Gaur</h1>
     <p>Business Analytics</p>
-
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/rajat-singh-gaur-28360423b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.instagram.com/gaurrajatsinghh" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
   </div>
 </section>
 
-<!-- PANEL -->
 <div class="panel">
   <div class="container">
     <a href="#about">About</a>
@@ -240,47 +216,19 @@ h2{
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
+<!-- LET'S WORK TOGETHER (LAST PANEL) -->
+<section class="cta">
   <div class="container">
-    <h2>About Me</h2>
-    <div class="card">
-      MBA (Business Analytics) student interested in data analysis, finance & business intelligence.
-    </div>
-  </div>
-</section>
+    <h2>Let's Work Together</h2>
+    <p>Have a project in mind? Let's build something amazing.</p>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">Advanced Microsoft Excel</div>
-      <div class="card">Power BI</div>
-      <div class="card">Tableau</div>
-      <div class="card">Python</div>
+    <div class="cta-links">
+      <a href="mailto:gaurrajat58@gmail.com">Say Hello</a>
+      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rajat-singh-gaur-28360423b" target="_blank">LinkedIn</a>
+      <a href="mailto:gaurrajat58@gmail.com">Email</a>
+      <a href="https://leetcode.com/" target="_blank">LeetCode</a>
     </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <div class="container">
-    <h2>Education</h2>
-    <div class="grid">
-      <div class="card">MBA – Business Analytics (2024–2026)</div>
-      <div class="card">B.Sc. Computer Science (2021–2024)</div>
-    </div>
-  </div>
-</section>
-
-<!-- RESUME -->
-<section id="resume">
-  <div class="container resume-section">
-    <h2>Download Resume</h2>
-    <a href="RAJAT SINGH GAUR Resume update.pdf" download class="resume-btn">
-      <i class="fas fa-download"></i> Download Resume
-    </a>
   </div>
 </section>
 
@@ -288,54 +236,25 @@ h2{
 /* PARTICLES */
 const canvas=document.getElementById("neonParticles");
 const ctx=canvas.getContext("2d");
-
-function resize(){
-  canvas.width=innerWidth;
-  canvas.height=innerHeight;
-}
-resize();
-addEventListener("resize",resize);
-
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight;}
+resize();addEventListener("resize",resize);
 const particles=Array.from({length:80},()=>({
-  x:Math.random()*canvas.width,
-  y:Math.random()*canvas.height,
-  r:Math.random()*2+1,
-  dx:(Math.random()-0.5),
-  dy:(Math.random()-0.5)
+x:Math.random()*canvas.width,y:Math.random()*canvas.height,
+r:Math.random()*2+1,dx:(Math.random()-0.5),dy:(Math.random()-0.5)
 }));
-
 function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach(p=>{
-    p.x+=p.dx; p.y+=p.dy;
-    if(p.x<0||p.x>canvas.width) p.dx*=-1;
-    if(p.y<0||p.y>canvas.height) p.dy*=-1;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle="rgba(245,197,24,0.8)";
-    ctx.shadowBlur=15;
-    ctx.shadowColor="#f5c518";
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
+ctx.clearRect(0,0,canvas.width,canvas.height);
+particles.forEach(p=>{
+p.x+=p.dx;p.y+=p.dy;
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
+ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="rgba(245,197,24,0.8)";
+ctx.shadowBlur=15;ctx.shadowColor="#f5c518";ctx.fill();
+});
+requestAnimationFrame(animate);
 }
 animate();
-
-/* MUSIC */
-const music=document.getElementById("bgMusic");
-const muteBtn=document.getElementById("muteBtn");
-
-document.addEventListener("click",()=>{
-  music.muted=false;
-  music.play();
-},{once:true});
-
-muteBtn.addEventListener("click",()=>{
-  music.muted=!music.muted;
-  muteBtn.innerHTML = music.muted
-    ? '<i class="fas fa-volume-mute"></i>'
-    : '<i class="fas fa-volume-up"></i>';
-});
 </script>
 
 </body>
