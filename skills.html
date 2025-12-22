@@ -32,7 +32,7 @@ body{
 
 /* HEADER */
 .header{
-  padding:80px 0;
+  padding:90px 0 70px;
   text-align:center;
 }
 .header h1{
@@ -61,25 +61,21 @@ body{
   transition:0.3s;
   text-align:center;
 }
+.card i{
+  font-size:38px;
+  color:var(--primary);
+  margin-bottom:15px;
+}
+.card h3{
+  margin:10px 0;
+}
+.card p{
+  opacity:0.8;
+  font-size:15px;
+}
 .card:hover{
   transform:translateY(-10px);
   box-shadow:0 0 35px rgba(245,197,24,0.8);
-}
-
-/* BACK TO HOME BUTTON */
-.back-btn{
-  display:inline-block;
-  padding:14px 36px;
-  border-radius:30px;
-  background:linear-gradient(135deg,#f5c518,#00e5ff);
-  color:#000;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 0 25px rgba(245,197,24,0.8);
-}
-.back-home{
-  text-align:center;
-  margin:100px 0 50px;
 }
 </style>
 </head>
@@ -94,26 +90,63 @@ body{
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS GRID -->
 <section>
   <div class="container">
     <div class="grid">
-      <div class="card">Microsoft Excel</div>
-      <div class="card">Power BI</div>
-      <div class="card">Tableau</div>
-      <div class="card">Python</div>
-      <div class="card">SQL</div>
-      <div class="card">Business Analytics</div>
+
+      <div class="card">
+        <i class="fas fa-file-excel"></i>
+        <h3>Microsoft Excel</h3>
+        <p>Advanced formulas, Pivot Tables, dashboards & data analysis</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Power BI</h3>
+        <p>Interactive dashboards, DAX basics, business reporting</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-chart-pie"></i>
+        <h3>Tableau</h3>
+        <p>Data visualization, charts & storytelling with data</p>
+      </div>
+
+      <div class="card">
+        <i class="fab fa-python"></i>
+        <h3>Python</h3>
+        <p>Data cleaning, analysis, automation & basics of ML</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-database"></i>
+        <h3>SQL</h3>
+        <p>Queries, joins, filtering & database handling</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Business Analytics</h3>
+        <p>Data-driven decision making & business insights</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- 🔥 BACK TO HOME (ABSOLUTE PATH – NO 404) -->
-<div class="back-home">
-  <a href="/YOUR-REPO-NAME/" class="back-btn">
-    ← Back to Home
+ <!-- BACK TO HOME (ONLY ONE – BOTTOM) -->
+  <div style="
+  text-align:center;
+   margin:100px 0 50px;
+   ">
+   <a href="../" style="
+  
+   ">
+   <a href="index.html" class="back-btn">← Back to Home</a>
   </a>
 </div>
 
 </body>
 </html>
+
