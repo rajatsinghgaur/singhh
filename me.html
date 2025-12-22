@@ -124,7 +124,6 @@ body{
   border-radius:20px;
   box-shadow:0 0 25px rgba(245,197,24,0.4);
   transition:0.5s;
-
   opacity:0;
   transform:translateY(60px);
 }
@@ -209,13 +208,6 @@ body{
   cursor:pointer;
 }
 
-@media(max-width:768px){
-  .collage-grid{
-    grid-template-columns:repeat(2,1fr);
-    grid-auto-rows:180px;
-  }
-}
-
 /* BATMAN THEME */
 .batman-overlay{
   position:absolute;
@@ -232,7 +224,6 @@ body{
   font-size:220px;
   font-weight:900;
   color:rgba(255,255,255,0.03);
-  letter-spacing:20px;
   text-shadow:0 0 40px rgba(0,0,0,0.9);
 }
 
@@ -260,7 +251,6 @@ body{
     opacity:0.8;
   }
 }
-
 </style>
 </head>
 
@@ -268,14 +258,14 @@ body{
 
 <!-- HERO -->
 <section class="hero">
-<div class="batman-overlay">
-  <div class="batman-logo">BATMAN</div>
+  <div class="batman-overlay">
+    <div class="batman-logo">🦇</div>
 
-  <span class="bat" style="top:20%; animation-duration:18s;"></span>
-  <span class="bat" style="top:35%; animation-duration:22s;"></span>
-  <span class="bat" style="top:55%; animation-duration:26s;"></span>
-  <span class="bat" style="top:70%; animation-duration:30s;"></span>
-</div>
+    <span class="bat" style="top:20%; animation-duration:18s;"></span>
+    <span class="bat" style="top:35%; animation-duration:22s;"></span>
+    <span class="bat" style="top:55%; animation-duration:26s;"></span>
+    <span class="bat" style="top:70%; animation-duration:30s;"></span>
+  </div>
 
   <div class="container">
     <img src="IMG_20251115_185859.jpg">
@@ -299,26 +289,11 @@ body{
 <section class="photo-collage">
   <h2>My Moments</h2>
   <div class="collage-grid">
-    <div class="collage-item big">
-      <img src="photo1.jpg">
-      <div class="heart">❤️</div>
-    </div>
-    <div class="collage-item">
-      <img src="photo2.jpg">
-      <div class="heart">❤️</div>
-    </div>
-    <div class="collage-item">
-      <img src="photo3.jpg">
-      <div class="heart">❤️</div>
-    </div>
-    <div class="collage-item wide">
-      <img src="photo4.jpg">
-      <div class="heart">❤️</div>
-    </div>
-    <div class="collage-item">
-      <img src="photo5.jpg">
-      <div class="heart">❤️</div>
-    </div>
+    <div class="collage-item big"><img src="photo1.jpg"><div class="heart">❤️</div></div>
+    <div class="collage-item"><img src="photo2.jpg"><div class="heart">❤️</div></div>
+    <div class="collage-item"><img src="photo3.jpg"><div class="heart">❤️</div></div>
+    <div class="collage-item wide"><img src="photo4.jpg"><div class="heart">❤️</div></div>
+    <div class="collage-item"><img src="photo5.jpg"><div class="heart">❤️</div></div>
   </div>
 </section>
 
@@ -330,8 +305,8 @@ body{
 
 <script>
 /* LIGHTBOX */
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
 document.querySelectorAll(".collage-item img").forEach(img=>{
   img.onclick=()=>{
     lightbox.style.display="flex";
@@ -365,4 +340,3 @@ document.querySelectorAll(".collage-item").forEach(item=>{
 
 </body>
 </html>
-
