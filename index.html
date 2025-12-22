@@ -25,28 +25,6 @@
   --card:#0f1116;
   --text:#f1f1f1;
 }
-/* ===== NAME LOGO ===== */
-.name-logo{
-  position:fixed;
-  top:22px;
-  left:30px;
-  z-index:10001;
-  font-size:22px;
-  font-weight:700;
-  letter-spacing:2px;
-  color:var(--primary);
-  text-shadow:
-    0 0 15px rgba(245,197,24,0.9),
-    0 0 35px rgba(0,229,255,0.6);
-  cursor:pointer;
-}
-
-.name-logo span{
-  color:#fff;
-  font-weight:500;
-  margin-left:6px;
-  opacity:0.85;
-}
 
 html{ scroll-behavior:smooth; }
 body{
@@ -395,51 +373,32 @@ h2{
   }
 }
 
+/* ===== RESPONSIVE TOP PANEL ===== */
+.panel .container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
 /* ===== SIMPLE RSG LOGO ===== */
 .rsg-logo{
-  position:fixed;           /* hamesha screen pe rahe */
-  top:20px;                 /* upar se distance */
-  left:28px;                /* left se distance */
-  z-index:10001;            /* sabke upar */
+  position:fixed;
+  top:18px;
+  left:25px;
+  z-index:10001;
 
   font-size:22px;
   font-weight:800;
   letter-spacing:2px;
 
-  color:var(--primary);     /* tumhare theme ka color */
-  cursor:pointer;
+  color:var(--primary);
+  text-decoration:none;
 
-  text-shadow:
-    0 0 12px rgba(245,197,24,0.9),
-    0 0 25px rgba(0,229,255,0.6);
+  text-shadow:0 0 10px rgba(245,197,24,0.8);
 }
 
-/* ===== PHOTO POPUP ===== */
-.logo-popup{
-  position:fixed;
-  inset:0;                  /* full screen cover */
-  background:rgba(0,0,0,0.85);
-  display:none;             /* by default band */
-  align-items:center;
-  justify-content:center;
-  z-index:20000;
-}
-
-.logo-popup img{
-  width:320px;
-  max-width:90%;
-  border-radius:18px;
-  box-shadow:0 0 40px rgba(245,197,24,0.9);
-}
-
-.logo-popup .close{
-  position:absolute;
-  top:30px;
-  right:40px;
-  font-size:34px;
-  color:#fff;
-  cursor:pointer;
-}
 
 
 </style>
@@ -456,23 +415,6 @@ h2{
   <button id="muteBtn">🔊</button>
 </div>
 
-<!-- SIMPLE RSG LOGO -->
-<div class="rsg-logo" onclick="openLogoPopup()">RSG</div>
-
-<!-- PHOTO POPUP -->
-<div class="logo-popup" id="logoPopup" onclick="closeLogoPopup()">
-
-  <!-- CLOSE BUTTON -->
-  <span class="close" onclick="closeLogoPopup()">×</span>
-
-  <!-- PHOTO (photo pe click karne se popup band na ho) -->
-  <img src="logo-photo.jpg"
-       alt="Rajat Singh Gaur"
-       onclick="event.stopPropagation()">
-
-</div>
-
-
 <canvas id="neonParticles"></canvas>
 
 <!-- HERO -->
@@ -485,12 +427,8 @@ h2{
   </div>
 </section>
 
-<!-- LOGO PHOTO POPUP -->
-<div class="logo-modal" id="logoModal">
-  <span onclick="closeLogo()">×</span>
-  <img src="WhatsApp Image 2025-12-22 at 6.49.25 PM.jpeg" alt="Rajat Singh Gaur">
-</div>
-
+<!-- SIMPLE LOGO -->
+<a href="index.html" class="rsg-logo">RSG</a>
 
 <!-- FIXED PANEL -->
 <div class="panel">
