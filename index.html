@@ -282,6 +282,20 @@ h2{
   background:rgba(15,17,22,0.95);
   padding:35px 30px;
   border-rad
+/* STICKY NAV PANEL */
+.panel{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  transition:0.3s;
+}
+
+/* scroll ke baad thoda compact look */
+.panel.scrolled{
+  background:rgba(5,5,8,0.95);
+  backdrop-filter:blur(15px);
+  box-shadow:0 8px 25px rgba(0,0,0,0.6);
+}
 
 </style>
 </head>
@@ -485,6 +499,19 @@ muteBtn.innerHTML = music.muted
 ? '<i class="fas fa-volume-mute"></i>'
 : '<i class="fas fa-volume-up"></i>';
 });
+<script>
+/* STICKY PANEL ON SCROLL */
+const panel = document.querySelector(".panel");
+
+window.addEventListener("scroll", ()=>{
+  if(window.scrollY > 50){
+    panel.classList.add("scrolled");
+  }else{
+    panel.classList.remove("scrolled");
+  }
+});
+</script>
+
 </script>
 
 <!-- COPYRIGHT -->
@@ -495,4 +522,5 @@ muteBtn.innerHTML = music.muted
 
 </body>
 </html>
+
 
