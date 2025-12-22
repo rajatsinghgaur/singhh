@@ -86,6 +86,8 @@ h2{
   text-shadow:
     0 0 25px rgba(245,197,24,0.35),
     0 0 60px rgba(245,197,24,0.25);
+  animation: analyticsMove 35s linear infinite;
+
 }
 
 .hero .container{ position:relative; z-index:2; }
@@ -355,6 +357,20 @@ h2{
   box-shadow:0 0 25px rgba(245,197,24,0.9);
 }
 
+/* ===== ANALYTICS BACKGROUND ANIMATION ===== */
+@keyframes analyticsMove{
+  0%{
+    transform:translate(-50%, -200px);
+    opacity:0.2;
+  }
+  50%{
+    opacity:0.35;
+  }
+  100%{
+    transform:translate(-50%, 1600px);
+    opacity:0.2;
+  }
+}
 
 </style>
 </head>
