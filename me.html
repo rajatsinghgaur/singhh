@@ -16,8 +16,10 @@
   --text:#f1f1f1;
 }
 
+/* 🔥 BODY PADDING FOR FIXED PANEL */
 body{
   margin:0;
+  padding-top:80px;
   font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--text);
@@ -27,6 +29,36 @@ body{
   width:90%;
   max-width:1000px;
   margin:auto;
+}
+
+/* ===== FIXED TOP PANEL ===== */
+.panel{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9999;
+  background:rgba(5,5,8,0.95);
+  backdrop-filter:blur(15px);
+  box-shadow:0 8px 25px rgba(0,0,0,0.6);
+}
+
+.panel .container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:18px 0;
+}
+
+.panel a{
+  margin:10px 18px;
+  text-decoration:none;
+  font-weight:600;
+  color:#e6e6e6;
+  transition:0.3s;
+}
+.panel a:hover{
+  color:var(--primary);
 }
 
 /* HERO */
@@ -198,23 +230,26 @@ body{
 .animate{opacity:0;transform:translateY(70px);transition:1s;}
 .animate.show{opacity:1;transform:translateY(0);}
 .hero,.story,.photo-collage{opacity:0;transform:translateY(70px);}
-
-.story-card img{
-  max-width:100%;
-  height:auto;
-  transition:0.6s;
-}
-.story-card img:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 40px rgba(0,229,255,0.9);
-}
 </style>
 </head>
 
 <body>
 
+<!-- 🔥 FIXED PANEL -->
+<div class="panel">
+  <div class="container">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#resume">Resume</a>
+    <a href="me.html">Me</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
   <div class="container">
     <img src="IMG_20251115_185859.jpg">
     <h1>This Is Me</h1>
@@ -223,58 +258,12 @@ body{
 </section>
 
 <!-- STORY -->
-<section class="story">
+<section class="story" id="about">
   <div class="container">
     <div class="story-card">
       <p>Hi, I’m <span>Rajat Singh Gaur</span>.</p>
-      <p>I am currently studying MBA in Business Analytics. I like working with data and understanding how businesses make decisions. I believe in continuous learning and growth.</p>
+      <p>I am currently studying MBA in Business Analytics. I like working with data and understanding how businesses make decisions.</p>
       <a href="index.html" class="back-btn">← Back to Home</a>
-    </div>
-  </div>
-</section>
-
-<!-- DELHI AI SUMMIT -->
-<section class="story">
-  <div class="container">
-    <div class="story-card">
-      <p>I attended a <span>Global Summit on Productivity in the Age of AI</span> in <span>New Delhi</span>.</p>
-      <p>I participated as a <span>Delegate</span> and learned how AI improves business productivity.</p>
-      <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
-        <img src="IMG20250820182519.jpg">
-        <img src="IMG_20250820_225451~2.jpg">
-        <img src="IMG-20250821-WA0012.jpg">
-        <img src="IMG-20250821-WA0017.jpg">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WEWORK -->
-<section class="story">
-  <div class="container">
-    <div class="story-card">
-      <p>I attended the <span>WeWork Sustainability Summit</span>.</p>
-      <p>This event focused on sustainability and responsible business practices.</p>
-      <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
-        <img src="IMG-20250924-WA0250.jpg">
-        <img src="IMG-20250925-WA0111.jpg">
-        <img src="IMG_20251115_185859.jpg">
-        <img src="IMG-20250924-WA0102.jpg">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AMUL -->
-<section class="story">
-  <div class="container">
-    <div class="story-card">
-      <p>I visited <span>Amul Dairy</span> as part of an industrial visit.</p>
-      <p>I learned about supply chain, production, and quality control.</p>
-      <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
-        <img src="IMG_20250901_211015.jpg">
-        <img src="IMG-20250822-WA0027.jpg">
-      </div>
     </div>
   </div>
 </section>
@@ -321,15 +310,6 @@ const reveal=()=>{
 };
 window.addEventListener("scroll",reveal);
 reveal();
-
-/* LIKE */
-document.querySelectorAll(".collage-item").forEach(item=>{
-  item.addEventListener("click",()=>{
-    const heart=item.querySelector(".heart");
-    heart.classList.add("show");
-    setTimeout(()=>heart.classList.remove("show"),1000);
-  });
-});
 
 /* GLOBAL SCROLL */
 const sections=document.querySelectorAll(".hero,.story,.photo-collage");
