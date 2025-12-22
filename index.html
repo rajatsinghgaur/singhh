@@ -256,6 +256,32 @@ h2{
   background:#050507;
   border-top:1px solid rgba(245,197,24,0.2);
 }
+/* ACHIEVEMENTS & EXTRA CURRICULAR */
+.achievements, .extra{
+  padding:100px 0;
+  text-align:center;
+}
+
+.achievements h2, .extra h2{
+  color:var(--primary);
+  font-size:36px;
+  margin-bottom:50px;
+  text-shadow:0 0 15px rgba(245,197,24,0.8);
+}
+
+.achieve-grid{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.achieve-card{
+  background:rgba(15,17,22,0.95);
+  padding:35px 30px;
+  border-rad
 
 </style>
 </head>
@@ -318,6 +344,74 @@ h2{
       <div class="card">Power BI</div>
       <div class="card">Tableau</div>
       <div class="card">Python</div>
+    </div>
+  </div>
+</section>
+<!-- ACHIEVEMENTS -->
+<section class="achievements" id="achievements">
+  <h2>Achievements</h2>
+
+  <div class="achieve-grid">
+    <div class="achieve-card">
+      <h3>🏅 NCC “A” Certificate</h3>
+      <p>
+        Awarded NCC “A” Certificate by the Government of India, reflecting
+        discipline, leadership, and national service.
+      </p>
+    </div>
+
+    <div class="achieve-card">
+      <h3>🌱 NSS Certificate</h3>
+      <p>
+        Certified for active participation in National Service Scheme (NSS),
+        contributing to community service and social development.
+      </p>
+    </div>
+
+    <div class="achieve-card">
+      <h3>🥈 Innovation Nexus – 2nd Place</h3>
+      <p>
+        Secured second position at Innovation Nexus event held at
+        Amity University (September 2024).
+      </p>
+    </div>
+  </div>
+</section>
+  <!-- EXTRA CURRICULAR ACTIVITIES -->
+<section class="extra" id="extra">
+  <h2>Extra-Curricular Activities</h2>
+
+  <div class="achieve-grid">
+    <div class="achieve-card">
+      <h3>🧑‍✈️ NCC Cadet</h3>
+      <p>
+        Served as an NCC Cadet, focusing on character building,
+        discipline, teamwork, and leadership skills.
+      </p>
+    </div>
+
+    <div class="achieve-card">
+      <h3>🤝 NSS Volunteer</h3>
+      <p>
+        Actively participated as an NSS volunteer in social service,
+        awareness drives, and community development programs.
+      </p>
+    </div>
+
+    <div class="achieve-card">
+      <h3>🤖 Google AI Conference Volunteer</h3>
+      <p>
+        Volunteered in a two-day International Conference on AI Revolution
+        organized at Amity University.
+      </p>
+    </div>
+
+    <div class="achieve-card">
+      <h3>🏛️ Student Union Member</h3>
+      <p>
+        Member of Vaish College Student Union, handling student issues
+        and administrative coordination.
+      </p>
     </div>
   </div>
 </section>
@@ -412,3 +506,4 @@ muteBtn.innerHTML = music.muted
 
 </body>
 </html>
+
